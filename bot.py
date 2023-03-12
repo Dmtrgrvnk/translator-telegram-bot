@@ -3,9 +3,9 @@ import logging
 
 from aiogram import Bot, Dispatcher
 
-from config_data.config import Config, load_config
-from handlers import handlers
-from keyboards.main_menu import set_main_manu
+from core.config_data.config import Config, load_config
+from core.handlers import handlers
+from core.keyboards import set_main_manu
 
 
 async def main():

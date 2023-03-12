@@ -1,7 +1,7 @@
 from aiogram import Bot
 from aiogram.types import BotCommand
 
-from lexicon import LEXICON_CMD_EN
+from core.lexicon import LEXICON_CMD_EN
 
 
 async def set_main_manu(bot: Bot):

@@ -1,5 +1,5 @@
 from aiogram import Router, Bot
-from aiogram.filters import CommandStart
+from aiogram.filters import CommandStart, Text
 from aiogram.types import Message
 
 from core.lexicon.lexicon import LEXICON_EN

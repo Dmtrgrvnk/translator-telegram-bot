@@ -14,18 +14,17 @@ async def main():
     token: Config = load_config()            # load bot token
 
     bot: Bot = Bot(token=token.tg_bot.token, parse_mode='HTML')  # init bot
-    dp: Dispatcher = Dispatcher()                         # init dispatcher
+    dp: Dispatcher = Dispatcher()                                # init dispatcher
 
     await set_main_manu(bot)            # main menu init
 
-    # registration of routers in the dispatcher
-    dp.include_router(handlers.router)
+    dp.include_router(handlers.router)  # registration of routers in the dispatcher
 
     await bot.delete_webhook(drop_pending_updates=True)  # delete old updates
     await dp.start_polling(bot)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # it's the entry point
     try:
         asyncio.run(main())
     except (KeyboardInterrupt, SystemExit):

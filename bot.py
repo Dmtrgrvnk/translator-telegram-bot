@@ -5,6 +5,7 @@ from aiogram import Bot, Dispatcher
 
 from core.config_data.config import Config, load_config
 from core.handlers import handlers
+from core.handlers import translate
 from core.keyboards import set_main_manu
 
 
@@ -19,7 +20,7 @@ async def main():
     await set_main_manu(bot)            # main menu init
 
     dp.include_router(handlers.router)  # registration of routers in the dispatcher
-
+    dp.include_router(translate.router)  # registration of translate router in the dispatcher
     await bot.delete_webhook(drop_pending_updates=True)  # delete old updates
     await dp.start_polling(bot)
 

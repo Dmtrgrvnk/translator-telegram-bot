@@ -1,5 +1,5 @@
 # translator-telegram-bot
-My first small project, a telegram bot that can translate any entered text into English.
+My small project, a telegram bot that can translate any entered text into English.
 
 In this project, I used the following libraries:
 
